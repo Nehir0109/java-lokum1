@@ -36,7 +36,7 @@ import java.util.Scanner;
 
 // Alt dize çıkarma: Kullanıcıdan bir dize alıp bu dizinin belirli bir alt dizesini çıkararak görüntüleyen bir java programı yazın.
 
-public class Main{
+/*public class Main{
     public static void main(String[] args){
         Scanner get= new Scanner(System.in);
 
@@ -56,5 +56,37 @@ public class Main{
         }
 
     }
-}
+}*/
 
+
+//Dize Karşılaştırma: İki kullanıcı tarafından girilen diziyi karşılaştıran bir program oluşturun.
+// Eğer diziler aynı ise "Diziler aynıdır" mesajını verin, aksi takdirde "Diziler farklıdır" mesajını görüntüleyin.
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner get = new Scanner(System.in);
+
+        System.out.print("Birinci dizeyi giriniz: ");
+        String input1 = get.nextLine();
+        System.out.print("İkinci dizeyi giriniz: ");
+        String input2 = get.nextLine();
+
+        String[] dize1 = input1.split(" ");
+        String[] dize2 = input2.split(" ");
+
+        if(dize1 == dize2){
+            System.out.println("Dizeler aynıdır.");
+        }else{
+            System.out.println("Dizeler aynı değildir");
+        }
+
+    }
+
+    private static boolean equalTest (String[] dizi1, String[] dizi2){
+
+        Arrays.sort(dizi1);
+        Arrays.sort(dizi2);
+
+        return Arrays.equals(dizi1, dizi2);
+    }
+}
