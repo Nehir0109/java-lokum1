@@ -94,7 +94,7 @@ import java.util.Scanner;
 
 //Dize Birleştirme: Kullanıcı tarafından girilen iki diziyi birleştiren ve sonucu görüntüleyen bir Java programı yazın.
 
-public class Main{
+/*public class Main{
     public static void main(String[] args) {
         Scanner get= new Scanner(System.in);
 
@@ -110,5 +110,32 @@ public class Main{
     private static String birlestir(String dizi1, String dizi2) {
 
         return dizi1 + " " + dizi2;
+    }
+}*/
+
+//Dize Bölme: Kullanıcıdan bir dize ve bir ayırıcı karakter girişi alın.
+// Dizeyi ayırıcı karaktere göre bölen ve böldükten sonra elde edilen alt dizeleri görüntüleyen bir program oluşturun.
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner get = new Scanner(System.in);
+
+        System.out.print("Bir cümle giriniz: ");
+        String cumle = get.nextLine();
+
+        String[] liste= cumle.split(" ");
+
+        System.out.print("Elde edilen parçalar: ");
+
+        for (int i = 0; i < liste.length; i++) {
+            System.out.print("\"" + liste[i] + "\"");
+
+            // Son kelimeyi yazdıktan sonra boşluk bırakma
+            if (i < liste.length - 1) {
+                System.out.print(", ");
+            }
+        }
+
+
     }
 }
