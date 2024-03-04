@@ -62,7 +62,7 @@ import java.util.Scanner;
 //Dize Karşılaştırma: İki kullanıcı tarafından girilen diziyi karşılaştıran bir program oluşturun.
 // Eğer diziler aynı ise "Diziler aynıdır" mesajını verin, aksi takdirde "Diziler farklıdır" mesajını görüntüleyin.
 
-public class Main{
+/*public class Main{
     public static void main(String[] args) {
         Scanner get = new Scanner(System.in);
 
@@ -88,5 +88,27 @@ public class Main{
         Arrays.sort(dizi2);
 
         return Arrays.equals(dizi1, dizi2);
+    }
+}*/
+
+
+//Dize Birleştirme: Kullanıcı tarafından girilen iki diziyi birleştiren ve sonucu görüntüleyen bir Java programı yazın.
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner get= new Scanner(System.in);
+
+        System.out.print("Birinici diziyi giriniz: ");
+        String dize1= get.nextLine();
+        System.out.print("İkinci diziyi giriniz: ");
+        String dize2 = get.nextLine();
+
+        String birlesikDize = birlestir(dize1,dize2);
+
+        System.out.println("Birleşik dizi: "+ birlesikDize);
+    }
+    private static String birlestir(String dizi1, String dizi2) {
+
+        return dizi1 + " " + dizi2;
     }
 }
